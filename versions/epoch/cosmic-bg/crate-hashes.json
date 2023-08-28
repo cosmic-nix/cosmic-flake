@@ -1,0 +1,7 @@
+{
+  "cosmic-config 0.1.0 (git+https://github.com/pop-os/libcosmic#1562a80245d9d8058e11603e34d0b2e234f20805)": "0v5v7j0rvfp5vhzsa2x43vqzjx6drh1kb4kdjx142y7xdzfq1m0m",
+  "cosmic-config-derive 0.1.0 (git+https://github.com/pop-os/libcosmic#1562a80245d9d8058e11603e34d0b2e234f20805)": "0v5v7j0rvfp5vhzsa2x43vqzjx6drh1kb4kdjx142y7xdzfq1m0m",
+  "iced_core 0.9.0 (git+https://github.com/pop-os/libcosmic#1562a80245d9d8058e11603e34d0b2e234f20805)": "0v5v7j0rvfp5vhzsa2x43vqzjx6drh1kb4kdjx142y7xdzfq1m0m",
+  "iced_futures 0.6.0 (git+https://github.com/pop-os/libcosmic#1562a80245d9d8058e11603e34d0b2e234f20805)": "0v5v7j0rvfp5vhzsa2x43vqzjx6drh1kb4kdjx142y7xdzfq1m0m",
+  "smithay-client-toolkit 0.16.0 (git+https://github.com/Smithay/client-toolkit?rev=bb3b73e#bb3b73e6dd923905d00325838b758e9cb0aba6af)": "0y3xp8jcwk292n35papkd1c2ljr2304ix7g30md2x1hyg64b6b8b"
+}

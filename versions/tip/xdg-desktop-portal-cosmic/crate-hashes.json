@@ -1,0 +1,10 @@
+{
+  "ashpd 0.6.0 (git+https://github.com/bilelmoussaoui/ashpd#c67c9cbaf8c02490b10ff976c48306dfa2d9bff6)": "1219vagaxqx972qiv290xii60zqi4321gpkdfmfwij59q6m09ss0",
+  "cosmic-client-toolkit 0.1.0 (git+https://github.com/pop-os/cosmic-protocols#e39748e1312d74ab8b4c26f4813b858413500b59)": "0pamld3hrr0h2h6pz4cpi2ragy2zf2zckmlqixg16hw3sgwqlmd5",
+  "cosmic-protocols 0.1.0 (git+https://github.com/pop-os/cosmic-protocols#e39748e1312d74ab8b4c26f4813b858413500b59)": "0pamld3hrr0h2h6pz4cpi2ragy2zf2zckmlqixg16hw3sgwqlmd5",
+  "libspa 0.7.2 (git+https://gitlab.freedesktop.org/pipewire/pipewire-rs#b530b3d39463a5918808841e453f6c662fd6e03b)": "0xrg017n94bxg4d8fq5g5gr752h386vgv5xjc9k17ni6b4sm6wj4",
+  "libspa-sys 0.7.2 (git+https://gitlab.freedesktop.org/pipewire/pipewire-rs#b530b3d39463a5918808841e453f6c662fd6e03b)": "0xrg017n94bxg4d8fq5g5gr752h386vgv5xjc9k17ni6b4sm6wj4",
+  "pipewire 0.7.2 (git+https://gitlab.freedesktop.org/pipewire/pipewire-rs#b530b3d39463a5918808841e453f6c662fd6e03b)": "0xrg017n94bxg4d8fq5g5gr752h386vgv5xjc9k17ni6b4sm6wj4",
+  "pipewire-sys 0.7.2 (git+https://gitlab.freedesktop.org/pipewire/pipewire-rs#b530b3d39463a5918808841e453f6c662fd6e03b)": "0xrg017n94bxg4d8fq5g5gr752h386vgv5xjc9k17ni6b4sm6wj4",
+  "smithay-client-toolkit 0.17.0 (git+https://github.com/smithay/client-toolkit?rev=c9940f4#c9940f4167f0d81cc26f77b7eeef6a34068a90a5)": "058d0c7dvzxg8bcl1yljdwz9dcdax20glx2f27djgid97k672wdz"
+}

@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "crate2nix": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1693149153,
+        "narHash": "sha256-HUszQcnIal1FFRAWraODDbxTp0HECwczRTD+Zf0v9o0=",
+        "owner": "kolloch",
+        "repo": "crate2nix",
+        "rev": "8749f46953b46d44fd181b002399e4a20371f323",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kolloch",
+        "repo": "crate2nix",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1693099187,
+        "narHash": "sha256-FXCc6OIghv9k4xYOhSMZI6bj7o56S8BJKzKtTKzdUVQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "cf2004afe4d4b95a295c63c911e949e40915eedb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "crate2nix": "crate2nix",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

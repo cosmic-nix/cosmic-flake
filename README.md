@@ -13,6 +13,11 @@ nix develop -c ./main.nu reset
 nix develop -c ./main.nu update
 ```
 
+```
+nix build .#packages.x86_64-linux.tip.cosmic-comp
+nix build .#packages.x86_64-linux.epoch.cosmic-comp
+```
+
 ## todo
 
 - ~port crate2nix from my devenv shell to here~

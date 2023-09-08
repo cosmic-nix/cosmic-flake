@@ -1,14 +1,34 @@
 {
-  description = "colemickens-nixcfg";
+  description = "cosimc-flake";
 
   inputs = {
     nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
     flake-utils = { url = "github:numtide/flake-utils"; };
-    crate2nix = { url = "github:kolloch/crate2nix"; flake = false; };
+
+    cosmic-comp = {
+      url = "github:pop-os/cosmic-comp";
+      inputs."nixpkgs".follows = "nixpkgs";
+    };
+    cosmic-launcher = {
+      url = "github:pop-os/cosmic-launcher";
+      inputs."nixpkgs".follows = "nixpkgs";
+    };
+    cosmic-panel = {
+      url = "github:pop-os/cosmic-panel";
+      inputs."nixpkgs".follows = "nixpkgs";
+    };
+    cosmic-session = {
+      url = "github:pop-os/cosmic-session";
+      inputs."nixpkgs".follows = "nixpkgs";
+    };
+    xdg-desktop-portal-cosmic = {
+      url = "github:pop-os/xdg-desktop-portal-cosmic";
+      inputs."nixpkgs".follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
-    inputs.flake-utils.lib.eachDefaultSystem (system:
+    ((inputs.flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = inputs.nixpkgs.legacyPackages.${system};
       in
@@ -21,17 +41,28 @@
             ];
           };
         };
+        # modules = {
+        #   nixos = { };
+        #   home-manager = { };
+        # };
         packages = {
-          epoch = {
-            cosmic-comp = import ./versions/epoch/cosmic-comp { inherit pkgs; };
-            cosmic-applets = import ./versions/epoch/cosmic-applets { inherit pkgs; };
-            cosmic-panel = import ./versions/epoch/cosmic-panel { inherit pkgs; };
-          };
-          tip = {
-            cosmic-comp = import ./versions/tip/cosmic-comp { inherit pkgs; };
-            cosmic-applets = import ./versions/tip/cosmic-applets { inherit pkgs; };
-            cosmic-panel = import ./versions/tip/cosmic-panel { inherit pkgs; };
+          upstream = rec {
+            all = inputs.nixpkgs.legacyPackages.${system}.symlinkJoin {
+              name = "cosmic";
+              paths = [
+                cosmic-comp
+                cosmic-launcher
+                cosmic-session
+                cosmic-panel
+                xdg-desktop-portal-cosmic
+              ];
+            };
+            cosmic-comp = inputs.cosmic-comp.packages.${system}.default;
+            cosmic-launcher = inputs.cosmic-launcher.packages.${system}.default;
+            cosmic-session = inputs.cosmic-session.packages.${system}.default;
+            cosmic-panel = inputs.cosmic-panel.packages.${system}.default;
+            xdg-desktop-portal-cosmic = inputs.xdg-desktop-portal-cosmic.packages.${system}.default;
           };
         };
-      });
+      })) // { passthru = { inherit inputs; }; });
 }

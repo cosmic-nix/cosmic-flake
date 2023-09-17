@@ -31,7 +31,7 @@ def "main update" [] {
     print -e "-------------------------------------"
     print -e $">> update ($component)"
     do {
-      cd $"($env.HOME)/code/cosmic/($component)"
+      cd $"($env.HOME)/code/cosmic-nix/($component)"
       git remote update
       git rebase
       nix flake lock --recreate-lock-file --commit-lock-file

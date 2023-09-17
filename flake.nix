@@ -8,27 +8,27 @@
     flake-utils = { url = "github:numtide/flake-utils"; };
 
     cosmic-comp = {
-      url = "github:colemickens/cosmic-comp";
+      url = "github:cosmic-nix/cosmic-comp";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     cosmic-launcher = {
-      url = "github:colemickens/cosmic-launcher";
+      url = "github:cosmic-nix/cosmic-launcher";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     cosmic-panel = {
-      url = "github:colemickens/cosmic-panel";
+      url = "github:cosmic-nix/cosmic-panel";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     cosmic-session = {
-      url = "github:colemickens/cosmic-session";
+      url = "github:cosmic-nix/cosmic-session";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     cosmic-settings = {
-      url = "github:colemickens/cosmic-session";
+      url = "github:cosmic-nix/cosmic-session";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     xdg-desktop-portal-cosmic = {
-      url = "github:colemickens/xdg-desktop-portal-cosmic";
+      url = "github:cosmic-nix/xdg-desktop-portal-cosmic";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
   };

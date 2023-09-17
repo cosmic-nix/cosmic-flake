@@ -1,13 +1,13 @@
 #!/usr/bin/env nu
 
 let components = [
-  "cosmic-applets"
-  "cosmic-applibrary"
-  "cosmic-bg"
+  # "cosmic-applets"
+  # "cosmic-applibrary"
+  # "cosmic-bg"
   "cosmic-comp"
   "cosmic-launcher"
-  "cosmic-notifications"
-  "cosmic-osd"
+  # "cosmic-notifications"
+  # "cosmic-osd"
   "cosmic-panel"
   "cosmic-session"
   "cosmic-settings"
@@ -26,45 +26,24 @@ def "main reset" [] {
 
 let root = $env.FILE_PWD;
 
-def update_single [ component: string ] {
-  # look up version
-  let epoch_rev = (^git -C _work/cosmic-epoch submodule status | ^grep $"($component)\$" | ^cut -d ' ' -f 1 | ^cut -d '-' -f2 | str trim)
-  print -e $"($component) >>> ($epoch_rev)"
-  
-  git clone $"https://github.com/pop-os/($component)" $"_work/($component)"
-    
-  do {
-    let ver = "epoch"
-    cd $"($root)/_work/($component)"
-    print -e "!! git reset"
-    git reset --hard $epoch_rev
-    crate2nix generate
-    mkdir $"($root)/versions/($ver)/($component)/"
-    cp "crate-hashes.json" $"($root)/versions/($ver)/($component)/"
-    cp "Cargo.nix" $"($root)/versions/($ver)/($component)/"
-    
-    rm "crate-hashes.json"
-    rm "Cargo.nix"
-    
-    # regenerate with tip
-    let ver = "tip"
-    git reset --hard origin/HEAD
-    crate2nix generate
-    mkdir $"($root)/versions/($ver)/($component)/"
-    cp "crate-hashes.json" $"($root)/versions/($ver)/($component)/"
-    cp "Cargo.nix" $"($root)/versions/($ver)/($component)/"
-  }
-}
-
 def "main update" [] {
-  nix flake lock --recreate-lock-file
-  
-  git clone https://github.com/pop-os/cosmic-epoch $"($root)/_work/cosmic-epoch"
   for component in $components {
-    update_single $component
+    print -e "-------------------------------------"
+    print -e $">> update ($component)"
+    do {
+      cd $"($env.HOME)/code/cosmic/($component)"
+      git remote update
+      git rebase
+      nix flake lock --recreate-lock-file --commit-lock-file
+      git push origin HEAD -f
+    }
   }
+
+  nix flake lock --recreate-lock-file --commit-lock-file
+  nix build .#packages.x86_64-linux.all -L --keep-going
+  # TODO: implement, loop through ~/code/cosmic/${repo} and `git rebase; nix flake lock --recreate-lock-file --commit-lock-file; git push origin HEAD`
 }
 
 def main [] {
-  print -e "usage: [update, reset]"
+  print -e "usage: [update]"
 }

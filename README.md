@@ -1,26 +1,17 @@
 # cosmic-flake
 
-## overview
-
-`nix + pop-os/cosmic = <3`
-
-shout-out: https://github.com/NixOS/nixpkgs/pull/251365
+see: [cosmic-nix](https://github.com/cosmic-nix)
 
 ## usage
 
-```
-nix develop -c ./main.nu reset
-nix develop -c ./main.nu update
-```
+- this updates, rebases, update flake inputs for "supported" cosmic components
 
 ```
-nix build .#packages.x86_64-linux.tip.cosmic-comp
-nix build .#packages.x86_64-linux.epoch.cosmic-comp
+nix develop -c ./main.nu update
 ```
 
 ## todo
 
-- ~port crate2nix from my devenv shell to here~
-- fixup actual package defs/builds
-- add github actions workflow
-- contact amjoseph-nixpkgs for help
+- maybe use `git-repo-manager`
+- add CI
+- don't rely on my own homedir/code structure

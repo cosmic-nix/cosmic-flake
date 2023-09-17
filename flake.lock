@@ -11,13 +11,13 @@
       "locked": {
         "lastModified": 1694993024,
         "narHash": "sha256-EXt9iogYlN0r38+lFXtv+/jK5SH09tH2jbdGhFbNCho=",
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "cosmic-comp",
         "rev": "b0286678649c62ff5afb44375bdd7f3228541eb1",
         "type": "github"
       },
       "original": {
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "cosmic-comp",
         "type": "github"
       }
@@ -33,13 +33,13 @@
       "locked": {
         "lastModified": 1694991586,
         "narHash": "sha256-va6dMLld1M8bjr1/9scOUdK71cLeOvcEYmggzp/PXjw=",
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "cosmic-launcher",
         "rev": "012cb302ce8802942afa91e1a7471a9900889249",
         "type": "github"
       },
       "original": {
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "cosmic-launcher",
         "type": "github"
       }
@@ -55,13 +55,13 @@
       "locked": {
         "lastModified": 1694991371,
         "narHash": "sha256-KcFHewnwybdQPe+oE/ye4pD05l9hPS7/rxCkknlD0gw=",
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "cosmic-panel",
         "rev": "aaad79ff11c1609e5ef4dcd6515fb574dc5ac156",
         "type": "github"
       },
       "original": {
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "cosmic-panel",
         "type": "github"
       }
@@ -75,15 +75,15 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1694994532,
-        "narHash": "sha256-SdJBRPQpGHZV3lDY+OF6S3qgL3TBqySQ/oso2Q9hr9k=",
-        "owner": "colemickens",
+        "lastModified": 1694994664,
+        "narHash": "sha256-iJ609N+hQ8uc38Im77dToJvA+8fe1dCvjqCp8cwdvLk=",
+        "owner": "cosmic-nix",
         "repo": "cosmic-session",
-        "rev": "115fc4914dbef604ccc183e9cf4d62ef91dbb8bb",
+        "rev": "81a42be09a8732b244829ead2a38c5e654346e9a",
         "type": "github"
       },
       "original": {
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "cosmic-session",
         "type": "github"
       }
@@ -97,15 +97,15 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1694994532,
-        "narHash": "sha256-SdJBRPQpGHZV3lDY+OF6S3qgL3TBqySQ/oso2Q9hr9k=",
-        "owner": "colemickens",
+        "lastModified": 1694994664,
+        "narHash": "sha256-iJ609N+hQ8uc38Im77dToJvA+8fe1dCvjqCp8cwdvLk=",
+        "owner": "cosmic-nix",
         "repo": "cosmic-session",
-        "rev": "115fc4914dbef604ccc183e9cf4d62ef91dbb8bb",
+        "rev": "81a42be09a8732b244829ead2a38c5e654346e9a",
         "type": "github"
       },
       "original": {
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "cosmic-session",
         "type": "github"
       }
@@ -1445,13 +1445,13 @@
       "locked": {
         "lastModified": 1694990412,
         "narHash": "sha256-95VoKDuJAFLsmi0Q9aiBxWx4Dn15s3iGT8P/HRLNDkE=",
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "xdg-desktop-portal-cosmic",
         "rev": "f71811b59ec7548fd792c9c2559fc2306961316a",
         "type": "github"
       },
       "original": {
-        "owner": "colemickens",
+        "owner": "cosmic-nix",
         "repo": "xdg-desktop-portal-cosmic",
         "type": "github"
       }

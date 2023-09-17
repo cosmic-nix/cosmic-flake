@@ -75,11 +75,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1694993045,
-        "narHash": "sha256-S0qPu4GK6OSw/fnITAisTrLMdVy2kA0UPqsS6C5Kuwo=",
+        "lastModified": 1694994532,
+        "narHash": "sha256-SdJBRPQpGHZV3lDY+OF6S3qgL3TBqySQ/oso2Q9hr9k=",
         "owner": "colemickens",
         "repo": "cosmic-session",
-        "rev": "2f252d20f6ab4166de0482baf9f02ca110c89a45",
+        "rev": "115fc4914dbef604ccc183e9cf4d62ef91dbb8bb",
         "type": "github"
       },
       "original": {
@@ -97,11 +97,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1694993045,
-        "narHash": "sha256-S0qPu4GK6OSw/fnITAisTrLMdVy2kA0UPqsS6C5Kuwo=",
+        "lastModified": 1694994532,
+        "narHash": "sha256-SdJBRPQpGHZV3lDY+OF6S3qgL3TBqySQ/oso2Q9hr9k=",
         "owner": "colemickens",
         "repo": "cosmic-session",
-        "rev": "2f252d20f6ab4166de0482baf9f02ca110c89a45",
+        "rev": "115fc4914dbef604ccc183e9cf4d62ef91dbb8bb",
         "type": "github"
       },
       "original": {

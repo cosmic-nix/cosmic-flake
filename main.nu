@@ -16,16 +16,6 @@ let components = [
   "xdg-desktop-portal-cosmic"
 ]
 
-def "main reset" [] {
-  mkdir versions/
-  mkdir versions/epoch
-  mkdir versions/tip
-  rm -rf _work
-  mkdir _work/
-}
-
-let root = $env.FILE_PWD;
-
 def "main update" [] {
   for component in $components {
     print -e "-------------------------------------"

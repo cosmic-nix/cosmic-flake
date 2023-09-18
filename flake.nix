@@ -53,16 +53,28 @@
           #   home-manager = { };
           # };
           packages = rec {
-            all = inputs.nixpkgs.legacyPackages.${system}.symlinkJoin {
-              name = "cosmic";
-              paths = [
-                cosmic-comp
-                cosmic-launcher
-                cosmic-session
-                cosmic-panel
-                xdg-desktop-portal-cosmic
-              ];
-            };
+            # all = inputs.nixpkgs.legacyPackages.${system}.symlinkJoin {
+            # all = inputs.nixpkgs.legacyPackages.${system}.buildEnv {
+            #   name = "cosmic";
+            #   paths = [
+            #     cosmic-comp
+            #     cosmic-launcher
+            #     cosmic-session
+            #     cosmic-settings
+            #     cosmic-panel
+            #     # xdg-desktop-portal-cosmic
+            #   ];
+            # };
+
+            # TODO: DRY nixify this:
+            all = inputs.nixpkgs.legacyPackages.${system}.linkFarm "cosmic-nix" [
+              { name = "cosmic-comp"; path = cosmic-comp; }
+              { name = "cosmic-launcher"; path = cosmic-launcher; }
+              { name = "cosmic-panel"; path = cosmic-panel; }
+              { name = "cosmic-session"; path = cosmic-session; }
+              { name = "cosmic-settings"; path = cosmic-settings; }
+              # { name = "xdg-desktop-portal-cosmic"; path = xdg-desktop-portal-cosmic; }
+            ];
             cosmic-comp = inputs.cosmic-comp.packages.${system}.default;
             cosmic-launcher = inputs.cosmic-launcher.packages.${system}.default;
             cosmic-panel = inputs.cosmic-panel.packages.${system}.default;

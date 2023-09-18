@@ -39,9 +39,14 @@ def "main update" [] {
     }
   }
 
+  print -e "-------------------------------------"
+  print -e $">> flake update"
   nix flake lock --recreate-lock-file --commit-lock-file
+
+  print -e "-------------------------------------"
+  print -e $">> nix build all"
   nix build .#packages.x86_64-linux.all -L --keep-going
-  # TODO: implement, loop through ~/code/cosmic/${repo} and `git rebase; nix flake lock --recreate-lock-file --commit-lock-file; git push origin HEAD`
+  ls -al ./result/
 }
 
 def main [] {

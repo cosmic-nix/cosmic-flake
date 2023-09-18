@@ -141,16 +141,16 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1694994664,
-        "narHash": "sha256-iJ609N+hQ8uc38Im77dToJvA+8fe1dCvjqCp8cwdvLk=",
+        "lastModified": 1694991850,
+        "narHash": "sha256-tj6JRv6PHSYmBHLdhntbsHErMcNTQ9hZQ+h4q6ieLYc=",
         "owner": "cosmic-nix",
-        "repo": "cosmic-session",
-        "rev": "81a42be09a8732b244829ead2a38c5e654346e9a",
+        "repo": "cosmic-settings",
+        "rev": "b4b078f426b9efdff37a13c800921a451f7984c5",
         "type": "github"
       },
       "original": {
         "owner": "cosmic-nix",
-        "repo": "cosmic-session",
+        "repo": "cosmic-settings",
         "type": "github"
       }
     },
@@ -1231,16 +1231,16 @@
     },
     "nixpkgs_9": {
       "locked": {
-        "lastModified": 1694891648,
-        "narHash": "sha256-8lblBYmUZwnvTiPoSRcUXEGMwau/f5abd8LYxSHsecU=",
-        "owner": "colemickens",
+        "lastModified": 1694948089,
+        "narHash": "sha256-d2B282GmQ9o8klc22/Rbbbj6r99EnELQpOQjWMyv0rU=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5c239433e229940db0a544ca17fe9fcaea97ab15",
+        "rev": "5148520bfab61f99fd25fb9ff7bfbb50dad3c9db",
         "type": "github"
       },
       "original": {
-        "owner": "colemickens",
-        "ref": "cmpkgs",
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }

@@ -18,8 +18,8 @@ let components = [
 
 def "main update" [] {
   for component in $components {
-    print -e "-------------------------------------"
-    print -e $">> update ($component)"
+    print -e $"(ansi yellow)--------------------------------------------(ansi reset)"
+    print -e $"(ansi yellow)>> update ($component)(ansi reset)"
     do {
       cd $"($env.HOME)/code/cosmic-nix/($component)"
       git remote update

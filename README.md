@@ -2,6 +2,9 @@
 
 see: [cosmic-nix](https://github.com/cosmic-nix)
 
+<img src="_img/tvshot.jpg" />
+(running components manually, on DRM, from TTY)
+
 ## usage
 
 - this updates, rebases, update flake inputs for "supported" cosmic components

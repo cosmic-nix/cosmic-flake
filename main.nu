@@ -3,11 +3,11 @@
 let components = [
   # "cosmic-applets"
   # "cosmic-applibrary"
-  # "cosmic-bg"
+  "cosmic-bg"
   "cosmic-comp"
   "cosmic-launcher"
   # "cosmic-notifications"
-  # "cosmic-osd"
+  "cosmic-osd"
   "cosmic-panel"
   "cosmic-session"
   "cosmic-settings"

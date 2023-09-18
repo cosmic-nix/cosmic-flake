@@ -23,7 +23,9 @@ nix develop -c ./main.nu update
 ## status:
 * not working:
   * xdg-desktop-portal-cosmic
+  * cosmic-osd
 * building:
+  * cosmic-bg
   * cosmic-comp
   * cosmic-panel
   * cosmic-launcher

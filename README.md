@@ -10,6 +10,11 @@ see: [cosmic-nix](https://github.com/cosmic-nix)
 nix develop -c ./main.nu update
 ```
 
+## investigate
+- why does cosmic-panel have an outpath of "cosmic-panel-bin" when others don't have "-bin" suffix?
+  - is there drift among how the nix flakes are setup for the components?
+  - feels like annoying maintenance long term... :(
+
 ## todo
 - maybe use `git-repo-manager`
 - add CI

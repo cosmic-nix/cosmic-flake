@@ -1443,11 +1443,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1694995659,
-        "narHash": "sha256-xgLJD4+u/GFI25HTPr79utcpKkjvy5BLFSoAfxKK6Oc=",
+        "lastModified": 1694995825,
+        "narHash": "sha256-95VoKDuJAFLsmi0Q9aiBxWx4Dn15s3iGT8P/HRLNDkE=",
         "owner": "cosmic-nix",
         "repo": "xdg-desktop-portal-cosmic",
-        "rev": "b61f526906cae6b57b87621fb665ded6e7203360",
+        "rev": "393bd949b8481e4998913e67771c526cbb9a0871",
         "type": "github"
       },
       "original": {

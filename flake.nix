@@ -32,7 +32,7 @@
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     cosmic-settings = {
-      url = "github:cosmic-nix/cosmic-session";
+      url = "github:cosmic-nix/cosmic-settings";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     xdg-desktop-portal-cosmic = {

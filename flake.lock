@@ -53,11 +53,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1695754950,
-        "narHash": "sha256-x/9m++T2wJ0jFyGdyM2+WY0HgJ0q92X2KchR6uFKULE=",
+        "lastModified": 1695756242,
+        "narHash": "sha256-wTj9lELXQowN75eGPlb5ftnoPwzOwryd2Cj9xsnQRek=",
         "owner": "cosmic-nix",
         "repo": "cosmic-launcher",
-        "rev": "ade16f40e827f3f03e4012976ae409ba1e65e0e0",
+        "rev": "c8a5017b1ffc8d6637aba01f57514ba54442c8ee",
         "type": "github"
       },
       "original": {

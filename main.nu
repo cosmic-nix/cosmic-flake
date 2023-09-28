@@ -1,12 +1,14 @@
 #!/usr/bin/env nu
 
+let cache = "colemickens"
+
 let components = [
-  # "cosmic-applets"
+  "cosmic-applets"
   # "cosmic-applibrary"
   "cosmic-bg"
   "cosmic-comp"
   "cosmic-launcher"
-  # "cosmic-notifications"
+  "cosmic-notifications"
   "cosmic-osd"
   "cosmic-panel"
   "cosmic-session"
@@ -37,6 +39,8 @@ def "main update" [] {
   print -e $">> nix build all"
   nix build .#packages.x86_64-linux.all -L --keep-going
   ls -al ./result/
+
+  readlink -f result | cachix push $cache
 }
 
 def main [] {

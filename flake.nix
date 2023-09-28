@@ -7,6 +7,10 @@
     nixpkgs = { url = "github:nixos/nixpkgs/nixpkgs-unstable"; };
     flake-utils = { url = "github:numtide/flake-utils"; };
 
+    cosmic-applets = {
+      url = "github:cosmic-nix/cosmic-applets";
+      # inputs."nixpkgs".follows = "nixpkgs";
+    };
     cosmic-bg = {
       url = "github:cosmic-nix/cosmic-bg";
       # inputs."nixpkgs".follows = "nixpkgs";
@@ -21,6 +25,10 @@
     };
     cosmic-osd = {
       url = "github:cosmic-nix/cosmic-osd";
+      # inputs."nixpkgs".follows = "nixpkgs";
+    };
+    cosmic-notifications = {
+      url = "github:cosmic-nix/cosmic-notifications";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     cosmic-panel = {
@@ -51,7 +59,6 @@
           devShells = {
             default = pkgs.mkShell {
               nativeBuildInputs = [
-                (import inputs.crate2nix { inherit pkgs; nixpkgs = null; })
                 pkgs.nushell
               ];
             };
@@ -77,18 +84,22 @@
             # TODO: DRY nixify this:
             all = inputs.nixpkgs.legacyPackages.${system}.linkFarm "cosmic-nix" [
               { name = "cosmic-bg"; path = cosmic-bg; }
+              { name = "cosmic-applets"; path = cosmic-applets; }
               { name = "cosmic-comp"; path = cosmic-comp; }
               { name = "cosmic-launcher"; path = cosmic-launcher; }
-              # { name = "cosmic-osd"; path = cosmic-osd; }
+              { name = "cosmic-osd"; path = cosmic-osd; }
+              { name = "cosmic-notifications"; path = cosmic-notifications; }
               { name = "cosmic-panel"; path = cosmic-panel; }
               { name = "cosmic-session"; path = cosmic-session; }
               { name = "cosmic-settings"; path = cosmic-settings; }
               # { name = "xdg-desktop-portal-cosmic"; path = xdg-desktop-portal-cosmic; }
             ];
+            cosmic-applets = inputs.cosmic-applets.packages.${system}.default;
             cosmic-bg = inputs.cosmic-bg.packages.${system}.default;
             cosmic-comp = inputs.cosmic-comp.packages.${system}.default;
             cosmic-launcher = inputs.cosmic-launcher.packages.${system}.default;
             cosmic-osd = inputs.cosmic-osd.packages.${system}.default;
+            cosmic-notifications = inputs.cosmic-notifications.packages.${system}.default;
             cosmic-panel = inputs.cosmic-panel.packages.${system}.default;
             cosmic-session = inputs.cosmic-session.packages.${system}.default;
             cosmic-settings = inputs.cosmic-settings.packages.${system}.default;

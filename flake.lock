@@ -53,11 +53,11 @@
         "rust": "rust"
       },
       "locked": {
-        "lastModified": 1696600669,
-        "narHash": "sha256-Tp7F2UEYl2SItplnKMXithFNBQQHkOFrzP2izmR56d4=",
+        "lastModified": 1696615935,
+        "narHash": "sha256-xkSsE6wTbtbqH7Wgl+6ZtuI9BUD2setJpHEUxTt3EPg=",
         "owner": "cosmic-nix",
         "repo": "cosmic-comp",
-        "rev": "a4622ae22be1825e6ce13b3e266fed4a78da5482",
+        "rev": "5b01a1183e71defe58af7dad1ce87f00adb3d9b0",
         "type": "github"
       },
       "original": {

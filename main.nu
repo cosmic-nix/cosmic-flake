@@ -1,6 +1,8 @@
 #!/usr/bin/env nu
 
-let cache = "colemickens"
+let cache = "cosmic-nix"
+
+$env.CACHIX_SIGNING_KEY = (open $"($env.HOME)/.cachix_signing_key_cosmic-nix" | str trim)
 
 let components = [
   "cosmic-applets"

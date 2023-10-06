@@ -83,8 +83,8 @@
 
             # TODO: DRY nixify this:
             all = inputs.nixpkgs.legacyPackages.${system}.linkFarm "cosmic-nix" [
-              { name = "cosmic-bg"; path = cosmic-bg; }
               { name = "cosmic-applets"; path = cosmic-applets; }
+              { name = "cosmic-bg"; path = cosmic-bg; }
               { name = "cosmic-comp"; path = cosmic-comp; }
               { name = "cosmic-launcher"; path = cosmic-launcher; }
               { name = "cosmic-osd"; path = cosmic-osd; }
@@ -92,7 +92,7 @@
               { name = "cosmic-panel"; path = cosmic-panel; }
               { name = "cosmic-session"; path = cosmic-session; }
               { name = "cosmic-settings"; path = cosmic-settings; }
-              # { name = "xdg-desktop-portal-cosmic"; path = xdg-desktop-portal-cosmic; }
+              { name = "xdg-desktop-portal-cosmic"; path = xdg-desktop-portal-cosmic; }
             ];
             cosmic-applets = inputs.cosmic-applets.packages.${system}.default;
             cosmic-bg = inputs.cosmic-bg.packages.${system}.default;

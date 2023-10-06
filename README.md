@@ -29,6 +29,10 @@ nix build --keep-failed -L '.#packages.x86_64-linux.cosmic-osd'
 nix build --keep-failed -L '.#packages.x86_64-linux.xdg-desktop-portal-cosmic'
 ```
 
+## cache
+
+see: [cachix - `cosmic-nix`](https://app.cachix.org/cache/cosmic-nix)
+
 ## investigate
 - why does cosmic-panel have an outpath of "cosmic-panel-bin" when others don't have "-bin" suffix?
   - is there drift among how the nix flakes are setup for the components?

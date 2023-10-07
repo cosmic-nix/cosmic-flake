@@ -1,6 +1,15 @@
 {
   description = "cosimc-flake";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://cosmic-nix.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "cosmic-nix.cachix.org-1:wFCnnb2EqGb7NX5NHThCuSqIvvUKnjA8nvGZraviJCQ="
+    ];
+  };
+
   inputs = {
     # other repos use nixpkgs-unstable, so let's do the same, why not
     # do we want to override the other stuff? even nixpkgs???

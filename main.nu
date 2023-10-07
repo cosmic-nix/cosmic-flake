@@ -6,7 +6,7 @@ $env.CACHIX_SIGNING_KEY = (open $"($env.HOME)/.cachix_signing_key_cosmic-nix" | 
 
 let components = [
   "cosmic-applets"
-  # "cosmic-applibrary"
+  "cosmic-applibrary"
   "cosmic-bg"
   "cosmic-comp"
   "cosmic-launcher"
@@ -43,6 +43,8 @@ def "main update" [] {
   ls -al ./result/
 
   readlink -f result | cachix push $cache
+
+  git push origin HEAD
 }
 
 def main [] {

@@ -21,7 +21,7 @@
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     cosmic-applibrary = {
-      url = "github:pop-os/cosmic-applibrary";
+      url = "github:cosmic-nix/cosmic-applibrary";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
     cosmic-bg = {
@@ -56,11 +56,10 @@
       url = "github:cosmic-nix/cosmic-settings";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
-    # TODO
-    /* cosmic-workspaces = {
-      url = "github:pop-os/cosmic-workspaces-epoch";
-      # inputs."nixpkgs".follows = "nixpkgs";
-    }; */
+    # cosmic-workspaces = {
+    #   url = "github:cosmic-nix/cosmic-workspaces-epoch";
+    #   # inputs."nixpkgs".follows = "nixpkgs";
+    # };
     xdg-desktop-portal-cosmic = {
       url = "github:cosmic-nix/xdg-desktop-portal-cosmic";
       # inputs."nixpkgs".follows = "nixpkgs";
@@ -88,6 +87,7 @@
           # };
           packages = rec {
             # all = inputs.nixpkgs.legacyPackages.${system}.symlinkJoin {
+            default = all;
             all = inputs.nixpkgs.legacyPackages.${system}.buildEnv {
               name = "cosmic";
               paths = [

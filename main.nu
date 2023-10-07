@@ -44,7 +44,7 @@ def "main update" [] {
 
   readlink -f result | cachix push $cache
 
-  git push origin HEAD
+  # git push origin HEAD
 }
 
 def main [] {

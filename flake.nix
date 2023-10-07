@@ -56,10 +56,10 @@
       url = "github:cosmic-nix/cosmic-settings";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
-    # cosmic-workspaces = {
-    #   url = "github:cosmic-nix/cosmic-workspaces-epoch";
-    #   # inputs."nixpkgs".follows = "nixpkgs";
-    # };
+    cosmic-workspaces = {
+      url = "github:cosmic-nix/cosmic-workspaces-epoch";
+      # inputs."nixpkgs".follows = "nixpkgs";
+    };
     xdg-desktop-portal-cosmic = {
       url = "github:cosmic-nix/xdg-desktop-portal-cosmic";
       # inputs."nixpkgs".follows = "nixpkgs";
@@ -101,6 +101,7 @@
                 cosmic-panel
                 cosmic-session
                 cosmic-settings
+                cosmic-workspaces
                 xdg-desktop-portal-cosmic
               ];
             };
@@ -128,7 +129,7 @@
             cosmic-panel = inputs.cosmic-panel.packages.${system}.default;
             cosmic-session = inputs.cosmic-session.packages.${system}.default;
             cosmic-settings = inputs.cosmic-settings.packages.${system}.default;
-            # cosmic-workspaces = inputs.cosmic-workspaces.packages.${system}.default;
+            cosmic-workspaces = inputs.cosmic-workspaces.packages.${system}.default;
             xdg-desktop-portal-cosmic = inputs.xdg-desktop-portal-cosmic.packages.${system}.default;
 
             # currently complains about missing cosmic-workspaces
@@ -145,7 +146,7 @@
                 cosmic-panel
                 cosmic-session
                 cosmic-settings
-                # cosmic-workspaces
+                cosmic-workspaces
                 xdg-desktop-portal-cosmic
               ];
               text = ''

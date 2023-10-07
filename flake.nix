@@ -56,6 +56,10 @@
       url = "github:cosmic-nix/cosmic-settings";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
+    cosmic-settings-daemon = {
+      url = "github:cosmic-nix/cosmic-settings-daemon";
+      # inputs."nixpkgs".follows = "nixpkgs";
+    };
     cosmic-workspaces = {
       url = "github:cosmic-nix/cosmic-workspaces-epoch";
       # inputs."nixpkgs".follows = "nixpkgs";
@@ -101,6 +105,7 @@
                 cosmic-panel
                 cosmic-session
                 cosmic-settings
+                cosmic-settings-daemon
                 cosmic-workspaces
                 xdg-desktop-portal-cosmic
               ];
@@ -129,6 +134,7 @@
             cosmic-panel = inputs.cosmic-panel.packages.${system}.default;
             cosmic-session = inputs.cosmic-session.packages.${system}.default;
             cosmic-settings = inputs.cosmic-settings.packages.${system}.default;
+            cosmic-settings-daemon = inputs.cosmic-settings-daemon.packages.${system}.default;
             cosmic-workspaces = inputs.cosmic-workspaces.packages.${system}.default;
             xdg-desktop-portal-cosmic = inputs.xdg-desktop-portal-cosmic.packages.${system}.default;
 
@@ -146,6 +152,7 @@
                 cosmic-panel
                 cosmic-session
                 cosmic-settings
+                cosmic-settings-daemon
                 cosmic-workspaces
                 xdg-desktop-portal-cosmic
               ];
@@ -219,7 +226,8 @@
                 cosmic-panel
                 cosmic-session
                 cosmic-settings
-                # cosmic-workspaces
+                cosmic-settings-daemon
+                cosmic-workspaces
                 xdg-desktop-portal-cosmic
               ];
               text = ''

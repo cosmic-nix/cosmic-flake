@@ -15,8 +15,8 @@ let components = [
   "cosmic-panel"
   "cosmic-session"
   "cosmic-settings"
-  # "cosmic-settings-daemon" # doesn't work for some reason?
-  # "cosmic-workspaces-epoch" # ?
+  "cosmic-settings-daemon"
+  "cosmic-workspaces-epoch"
   "xdg-desktop-portal-cosmic"
 ]
 

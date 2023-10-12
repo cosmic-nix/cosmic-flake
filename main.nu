@@ -9,6 +9,7 @@ let components = [
   "cosmic-applibrary"
   "cosmic-bg"
   "cosmic-comp"
+  "cosmic-greeter"
   "cosmic-launcher"
   "cosmic-notifications"
   "cosmic-osd"
@@ -36,7 +37,9 @@ def "main update" [] {
   print -e "-------------------------------------"
   print -e $">> flake update"
   nix flake lock --recreate-lock-file --commit-lock-file
+}
 
+def build_cache[] {
   print -e "-------------------------------------"
   print -e $">> nix build all"
   nix build .#packages.x86_64-linux.all -L --keep-going
@@ -48,5 +51,5 @@ def "main update" [] {
 }
 
 def main [] {
-  print -e "usage: [update]"
+  print -e "usage: [update, build_cache]"
 }

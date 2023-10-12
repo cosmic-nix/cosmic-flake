@@ -32,6 +32,10 @@
       url = "github:cosmic-nix/cosmic-comp";
       # inputs."nixpkgs".follows = "nixpkgs";
     };
+    cosmic-greeter = {
+      url = "github:cosmic-nix/cosmic-greeter";
+      # inputs."nixpkgs".follows = "nixpkgs";
+    };
     cosmic-launcher = {
       url = "github:cosmic-nix/cosmic-launcher";
       # inputs."nixpkgs".follows = "nixpkgs";
@@ -99,6 +103,7 @@
                 cosmic-applibrary
                 cosmic-bg
                 cosmic-comp
+                cosmic-greeter
                 cosmic-launcher
                 cosmic-osd
                 cosmic-notifications
@@ -128,6 +133,7 @@
             cosmic-applibrary = inputs.cosmic-applibrary.packages.${system}.default;
             cosmic-bg = inputs.cosmic-bg.packages.${system}.default;
             cosmic-comp = inputs.cosmic-comp.packages.${system}.default;
+            cosmic-greeter = inputs.cosmic-greeter.packages.${system}.default;
             cosmic-launcher = inputs.cosmic-launcher.packages.${system}.default;
             cosmic-osd = inputs.cosmic-osd.packages.${system}.default;
             cosmic-notifications = inputs.cosmic-notifications.packages.${system}.default;
@@ -146,6 +152,7 @@
                 cosmic-applibrary
                 cosmic-bg
                 cosmic-comp
+                cosmic-greeter
                 cosmic-launcher
                 cosmic-osd
                 cosmic-notifications

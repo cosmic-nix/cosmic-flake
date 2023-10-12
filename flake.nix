@@ -15,6 +15,7 @@
     # do we want to override the other stuff? even nixpkgs???
     nixpkgs = { url = "github:nixos/nixpkgs/nixpkgs-unstable"; };
     flake-utils = { url = "github:numtide/flake-utils"; };
+    nix-fast-build = { url = "github:mic92/nix-fast-build"; };
 
     cosmic-applets = {
       url = "github:cosmic-nix/cosmic-applets";
@@ -86,6 +87,7 @@
             default = pkgs.mkShell {
               nativeBuildInputs = [
                 pkgs.nushell
+                inputs.nix-fast-build.outputs.packages.${system}.default
               ];
             };
           };
@@ -104,6 +106,24 @@
                 cosmic-bg
                 cosmic-comp
                 cosmic-greeter
+                cosmic-launcher
+                cosmic-osd
+                cosmic-notifications
+                cosmic-panel
+                cosmic-session
+                cosmic-settings
+                cosmic-settings-daemon
+                cosmic-workspaces
+                xdg-desktop-portal-cosmic
+              ];
+            };
+            building = inputs.nixpkgs.legacyPackages.${system}.buildEnv {
+              name = "cosmic-builidng";
+              paths = [
+                cosmic-applets
+                cosmic-applibrary
+                cosmic-bg
+                cosmic-comp
                 cosmic-launcher
                 cosmic-osd
                 cosmic-notifications

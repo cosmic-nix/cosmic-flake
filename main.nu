@@ -39,7 +39,7 @@ def "main update" [] {
   nix flake lock --recreate-lock-file --commit-lock-file
 }
 
-def build_cache[] {
+def build_cache [] {
   print -e "-------------------------------------"
   print -e $">> nix build all"
   nix build .#packages.x86_64-linux.all -L --keep-going
